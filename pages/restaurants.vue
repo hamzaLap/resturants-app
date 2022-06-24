@@ -5,7 +5,7 @@
     <h1 class="mt-20 mb-10 mx-20 text-2xl">Restaurants page</h1>
     <section class="mx-20 mb-20 flex flex-wrap space-y-5 md:flex-nowrap md:space-y-0 lg:space-x-5 ">
       <resturantsTab :grp_rests="first_resturants" />
-      <resturantsTab  :grp_rests="second_resturants"/>
+      <resturantsTab class="md:rmv-head" :grp_rests="second_resturants"/>
     </section>
 
 
