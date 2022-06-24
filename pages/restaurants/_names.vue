@@ -1,39 +1,36 @@
 <template>
-<div>
+<div >
   <NuxtLink to="/restaurants">
     <button class="w-20  bg-green-200 m-5 rounded hover:bg-green-300" >back</button>
   </NuxtLink>
- <section>
-   <h1> {{rest_name}}</h1>
-   <h1>rank is {{the_restaurant.rank}}</h1>
-   <h1>number of stores {{the_restaurant.numberOfStores}}</h1>
-   <h1>revenue is {{the_restaurant.revenue}}</h1>
- </section>
-  <div>
-    <img :src="the_restaurant.imageUrl" :alt="the_restaurant.name">
+  <!-- render the specified restaurant -->
+  <main v-if=" the_restaurant">
 
-    <p>{{  this.the_restaurant.content}}</p>
+         <restinfos   :the_restaurant="the_restaurant"   />
+  </main>
+  <!-- not find page -->
 
-</div>
+  <div v-else >
+
+      <h1>cannot find page</h1>
+
+  </div>
 </div>
 </template>
 
 <script>
+
 import resturantsObj from "@/data.json"
 
 export default {
   mounted(){
-    this.the_restaurant=resturantsObj.find(rest => rest.name==this.rest_name)
-  },
-data(){
-  return{
-    rest_name:this.$route.params.names,
-    the_restaurant: {}
+            this.the_restaurant=resturantsObj.find(rest => rest.name==this.rest_name)
+    },
+  data(){
+      return{
+         rest_name:this.$route.params.names,
+         the_restaurant: {}
   }
 }
 }
 </script>
-var name =
-<style>
-
-</style>
