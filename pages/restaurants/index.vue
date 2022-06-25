@@ -6,19 +6,21 @@
     <section class="mx-20 mb-20 flex flex-wrap    md:flex-nowrap md:space-y-0 lg:space-x-5 ">
       <table class="w-96 table-auto border md:w-100">
         <!-- table head -->
-         <resturantsTabhead />
-          <tbody>
+         <resturantsTabhead />           
             <!-- table rows  -->
-          <ResturantsTabrow v-for="rest in first_resturants" :the_resturant="rest" :key="rest.id"     /> 
-          </tbody>
+            <tbody>
+              <ResturantsTabrow v-for="rest in first_resturants" :the_resturant="rest" :key="rest.id" /> 
+            </tbody>
+          
       </table>
        <table class="w-96 table-auto border md:w-100 ">
         <!-- table head -->
-         <resturantsTabhead class="hidden md:block"/>
+         <resturantsTabhead class="hidden md:table-row"/>
           <!-- table rows  -->
           <tbody>
             <ResturantsTabrow v-for="rest in second_resturants " :the_resturant="rest" :key="rest.id" />  
           </tbody>
+
        </table>
     </section>
 
