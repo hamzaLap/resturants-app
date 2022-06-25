@@ -12,6 +12,7 @@
     <!-- componenet for restaurants error -->
     <resterror/>
   </div>
+    <restFooter/>
 </div>
 </template>
 
